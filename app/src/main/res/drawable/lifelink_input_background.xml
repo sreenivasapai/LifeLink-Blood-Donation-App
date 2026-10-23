@@ -7,4 +7,3 @@
         android:color="@color/lifelink_border" />
     <corners android:radius="12dp" />
 </shape>
-s
