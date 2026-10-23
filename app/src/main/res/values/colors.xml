@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="lifelink_red">#C91D35</color>
+    <color name="lifelink_red_dark">#A9152A</color>
+    <color name="lifelink_background">#FFF5F4</color>
+    <color name="lifelink_white">#FFFFFF</color>
+    <color name="lifelink_text">#272727</color>
+    <color name="lifelink_secondary_text">#777777</color>
+    <color name="lifelink_border">#F0DCDD</color>
+</resources>
