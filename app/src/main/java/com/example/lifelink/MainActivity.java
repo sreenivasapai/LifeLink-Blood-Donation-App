@@ -1,10 +1,12 @@
 package com.example.lifelink;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.Toast;
-import android.content.Intent;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,6 +16,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (FirebaseAuth.getInstance().getCurrentUser() != null) {
+            openDashboard();
+            return;
+        }
+
         setContentView(R.layout.activity_main);
 
         btnGetStarted = findViewById(R.id.btnGetStarted);
@@ -27,12 +35,27 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        btnLogin.setOnClickListener(v ->
-                Toast.makeText(
-                        MainActivity.this,
-                        "Login screen coming next!",
-                        Toast.LENGTH_SHORT
-                ).show()
+        btnLogin.setOnClickListener(v -> {
+            Intent intent = new Intent(
+                    MainActivity.this,
+                    LoginActivity.class
+            );
+            startActivity(intent);
+        });
+    }
+
+    private void openDashboard() {
+        Intent intent = new Intent(
+                MainActivity.this,
+                HomeActivity.class
         );
+
+        intent.addFlags(
+                Intent.FLAG_ACTIVITY_NEW_TASK |
+                        Intent.FLAG_ACTIVITY_CLEAR_TASK
+        );
+
+        startActivity(intent);
+        finish();
     }
 }

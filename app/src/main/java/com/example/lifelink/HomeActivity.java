@@ -1,4 +1,5 @@
 package com.example.lifelink;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -15,9 +16,14 @@ public class HomeActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
+
     private TextView tvWelcome;
-    private Button btnFindDonors, btnRequestBlood, btnBecomeDonor;
-    private Button btnMyRequests, btnProfile, btnLogout;
+    private Button btnFindDonors;
+    private Button btnRequestBlood;
+    private Button btnBecomeDonor;
+    private Button btnMyRequests;
+    private Button btnProfile;
+    private Button btnLogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,53 +48,58 @@ public class HomeActivity extends AppCompatActivity {
             return;
         }
 
+        // Display the user's name from Firestore.
+        tvWelcome.setText("Welcome to LifeLink!");
+
         db.collection("users")
                 .document(currentUser.getUid())
                 .get()
                 .addOnSuccessListener(document -> {
-                    if (document.exists()) {
-                        String name = document.getString("name");
-                        tvWelcome.setText(
-                                "Welcome, " +
-                                        (name != null ? name : "LifeLink User") +
-                                        "!"
-                        );
-                    } else {
-                        tvWelcome.setText("Welcome to LifeLink!");
+                    if (!isFinishing() && !isDestroyed()) {
+                        if (document.exists()) {
+                            String name = document.getString("name");
+
+                            if (name != null && !name.trim().isEmpty()) {
+                                tvWelcome.setText("Welcome, " + name + "!");
+                            }
+                        }
                     }
                 })
                 .addOnFailureListener(e ->
-                        tvWelcome.setText("Welcome to LifeLink!"));
+                        Toast.makeText(
+                                HomeActivity.this,
+                                "Could not load profile. Please try again later.",
+                                Toast.LENGTH_SHORT
+                        ).show()
+                );
 
         btnFindDonors.setOnClickListener(v ->
-                Toast.makeText(this,
-                        "Find Donors is coming next",
-                        Toast.LENGTH_SHORT).show());
+                showComingSoon("Find Donors"));
 
         btnRequestBlood.setOnClickListener(v ->
-                Toast.makeText(this,
-                        "Blood Requests are coming next",
-                        Toast.LENGTH_SHORT).show());
+                showComingSoon("Request Blood"));
 
         btnBecomeDonor.setOnClickListener(v ->
-                Toast.makeText(this,
-                        "Donor registration is coming next",
-                        Toast.LENGTH_SHORT).show());
+                showComingSoon("Become a Donor"));
 
         btnMyRequests.setOnClickListener(v ->
-                Toast.makeText(this,
-                        "My Requests is coming next",
-                        Toast.LENGTH_SHORT).show());
+                showComingSoon("My Requests"));
 
         btnProfile.setOnClickListener(v ->
-                Toast.makeText(this,
-                        "My Profile is coming next",
-                        Toast.LENGTH_SHORT).show());
+                showComingSoon("My Profile"));
 
         btnLogout.setOnClickListener(v -> {
             mAuth.signOut();
             openWelcomeScreen();
         });
+    }
+
+    private void showComingSoon(String feature) {
+        Toast.makeText(
+                this,
+                feature + " is coming soon!",
+                Toast.LENGTH_SHORT
+        ).show();
     }
 
     private void openWelcomeScreen() {
