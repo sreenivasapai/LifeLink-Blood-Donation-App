@@ -94,8 +94,13 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        btnMyRequests.setOnClickListener(v ->
-                showComingSoon("My Requests"));
+        btnMyRequests.setOnClickListener(v -> {
+            Intent intent = new Intent(
+                    HomeActivity.this,
+                    MyRequestsActivity.class
+            );
+            startActivity(intent);
+        });
 
         btnProfile.setOnClickListener(v ->
                 showComingSoon("My Profile"));

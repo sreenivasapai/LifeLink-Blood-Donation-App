@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lifelink_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="← Back to Dashboard"
+            android:textColor="@color/lifelink_red"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="My Blood Requests"
+            android:textColor="@color/lifelink_red"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="16dp"
+            android:text="Track the blood requests you have submitted."
+            android:textColor="@color/lifelink_secondary_text"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnRefreshRequests"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/lifelink_red"
+            android:text="Refresh Requests"
+            android:textAllCaps="false"
+            android:textColor="@color/lifelink_white" />
+
+        <ProgressBar
+            android:id="@+id/progressMyRequests"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="16dp"
+            android:indeterminateTint="@color/lifelink_red"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvRequestsStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="Loading your requests..."
+            android:textColor="@color/lifelink_secondary_text"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/layoutMyRequests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+</ScrollView>
