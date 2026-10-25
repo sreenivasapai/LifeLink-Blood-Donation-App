@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LifeLink"
         tools:targetApi="31">
-
+        <activity
+            android:name=".BecomeDonorActivity"
+            android:exported="false" />
         <activity
             android:name=".HomeActivity"
             android:exported="false" />

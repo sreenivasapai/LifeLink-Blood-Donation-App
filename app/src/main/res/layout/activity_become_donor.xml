@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lifelink_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="← Back to Dashboard"
+            android:textColor="@color/lifelink_red"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Become a Donor 🩸"
+            android:textColor="@color/lifelink_red"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:text="Register as a blood donor and help save lives."
+            android:textColor="@color/lifelink_secondary_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Full Name"
+            android:textColor="@color/lifelink_text"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etDonorName"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/lifelink_input_background"
+            android:hint="Enter your full name"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textColor="@color/lifelink_text"
+            android:textColorHint="@color/lifelink_secondary_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blood Group"
+            android:textColor="@color/lifelink_text"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spBloodGroup"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/lifelink_input_background"
+            android:padding="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:textColor="@color/lifelink_text"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etDonorPhone"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/lifelink_input_background"
+            android:hint="Enter your phone number"
+            android:inputType="phone"
+            android:maxLength="15"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textColor="@color/lifelink_text"
+            android:textColorHint="@color/lifelink_secondary_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="District"
+            android:textColor="@color/lifelink_text"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etDistrict"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/lifelink_input_background"
+            android:hint="e.g. Alappuzha"
+            android:inputType="textCapWords"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textColor="@color/lifelink_text"
+            android:textColorHint="@color/lifelink_secondary_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="City / Town / Locality"
+            android:textColor="@color/lifelink_text"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etDonorLocation"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/lifelink_input_background"
+            android:hint="Enter your locality"
+            android:inputType="textCapWords"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textColor="@color/lifelink_text"
+            android:textColorHint="@color/lifelink_secondary_text" />
+
+        <CheckBox
+            android:id="@+id/cbAvailable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"
+            android:buttonTint="@color/lifelink_red"
+            android:checked="true"
+            android:text="I am currently available to donate"
+            android:textColor="@color/lifelink_text" />
+
+        <Button
+            android:id="@+id/btnSaveDonor"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:backgroundTint="@color/lifelink_red"
+            android:text="Register as Donor"
+            android:textAllCaps="false"
+            android:textColor="@color/lifelink_white"
+            android:textSize="16sp" />
+
+        <ProgressBar
+            android:id="@+id/progressDonor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:indeterminateTint="@color/lifelink_red"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</ScrollView>

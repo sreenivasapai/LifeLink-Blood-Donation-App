@@ -79,8 +79,10 @@ public class HomeActivity extends AppCompatActivity {
         btnRequestBlood.setOnClickListener(v ->
                 showComingSoon("Request Blood"));
 
-        btnBecomeDonor.setOnClickListener(v ->
-                showComingSoon("Become a Donor"));
+        btnBecomeDonor.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, BecomeDonorActivity.class);
+            startActivity(intent);
+        });
 
         btnMyRequests.setOnClickListener(v ->
                 showComingSoon("My Requests"));
