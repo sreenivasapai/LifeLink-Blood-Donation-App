@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lifelink_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LifeLink ❤️"
+            android:textColor="@color/lifelink_red"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Welcome to LifeLink!"
+            android:textColor="@color/lifelink_text"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Every drop matters. How can we help you today?"
+            android:textColor="@color/lifelink_secondary_text"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btnFindDonors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Find Blood Donors"
+            android:backgroundTint="@color/lifelink_red" />
+
+        <Button
+            android:id="@+id/btnRequestBlood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Request Blood"
+            android:backgroundTint="@color/lifelink_red" />
+
+        <Button
+            android:id="@+id/btnBecomeDonor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Become a Donor"
+            android:backgroundTint="@color/lifelink_red" />
+
+        <Button
+            android:id="@+id/btnMyRequests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="My Requests"
+            android:backgroundTint="@color/lifelink_red" />
+
+        <Button
+            android:id="@+id/btnProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="My Profile"
+            android:backgroundTint="@color/lifelink_red" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Logout" />
+
+    </LinearLayout>
+</ScrollView>
