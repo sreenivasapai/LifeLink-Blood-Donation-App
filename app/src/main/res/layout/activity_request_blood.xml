@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lifelink_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="← Back to Dashboard"
+            android:textColor="@color/lifelink_red"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Request Blood 🩸"
+            android:textColor="@color/lifelink_red"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"
+            android:text="Provide the details of the blood requirement."
+            android:textColor="@color/lifelink_secondary_text"
+            android:textSize="14sp" />
+
+        <!-- Patient details -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Patient Name"
+            android:textColor="@color/lifelink_text"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etPatientName"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/lifelink_input_background"
+            android:hint="Enter patient name"
+            android:inputType="textPersonName|textCapWords"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textColor="@color/lifelink_text"
+            android:textColorHint="@color/lifelink_secondary_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Required Blood Group"
+            android:textColor="@color/lifelink_text"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spRequestBloodGroup"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/lifelink_input_background"
+            android:padding="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Units Required"
+            android:textColor="@color/lifelink_text"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etUnitsRequired"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/lifelink_input_background"
+            android:hint="Enter number of units"
+            android:inputType="number"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textColor="@color/lifelink_text"
+            android:textColorHint="@color/lifelink_secondary_text" />
+
+        <!-- Hospital details -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hospital Name"
+            android:textColor="@color/lifelink_text"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etHospitalName"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/lifelink_input_background"
+            android:hint="Enter hospital name"
+            android:inputType="textCapWords"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textColor="@color/lifelink_text"
+            android:textColorHint="@color/lifelink_secondary_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="District"
+            android:textColor="@color/lifelink_text"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etRequestDistrict"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/lifelink_input_background"
+            android:hint="e.g. Alappuzha"
+            android:inputType="textCapWords"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textColor="@color/lifelink_text"
+            android:textColorHint="@color/lifelink_secondary_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hospital Location / Address"
+            android:textColor="@color/lifelink_text"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etHospitalLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="72dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/lifelink_input_background"
+            android:gravity="top|start"
+            android:hint="Enter hospital address or nearby landmark"
+            android:inputType="textCapSentences|textMultiLine"
+            android:minLines="2"
+            android:padding="12dp"
+            android:textColor="@color/lifelink_text"
+            android:textColorHint="@color/lifelink_secondary_text" />
+
+        <!-- Contact details -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact Person"
+            android:textColor="@color/lifelink_text"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etContactPerson"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/lifelink_input_background"
+            android:hint="Who can donors contact?"
+            android:inputType="textPersonName|textCapWords"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textColor="@color/lifelink_text"
+            android:textColorHint="@color/lifelink_secondary_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact Phone"
+            android:textColor="@color/lifelink_text"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etContactPhone"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/lifelink_input_background"
+            android:hint="Enter contact phone number"
+            android:inputType="phone"
+            android:maxLength="15"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textColor="@color/lifelink_text"
+            android:textColorHint="@color/lifelink_secondary_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Urgency"
+            android:textColor="@color/lifelink_text"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spUrgency"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/lifelink_input_background"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btnSubmitRequest"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:backgroundTint="@color/lifelink_red"
+            android:text="Submit Blood Request"
+            android:textAllCaps="false"
+            android:textColor="@color/lifelink_white"
+            android:textSize="16sp" />
+
+        <ProgressBar
+            android:id="@+id/progressRequest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:indeterminateTint="@color/lifelink_red"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>
