@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lifelink_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="← Back to Dashboard"
+            android:textColor="@color/lifelink_red"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Find Blood Donors"
+            android:textColor="@color/lifelink_red"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="20dp"
+            android:text="Find registered donors near you."
+            android:textColor="@color/lifelink_secondary_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blood Group"
+            android:textColor="@color/lifelink_text"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spSearchBloodGroup"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/lifelink_input_background"
+            android:padding="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="District (optional)"
+            android:textColor="@color/lifelink_text"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etSearchDistrict"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/lifelink_input_background"
+            android:hint="e.g. Ernakulam"
+            android:inputType="textCapWords"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textColor="@color/lifelink_text"
+            android:textColorHint="@color/lifelink_secondary_text" />
+
+        <CheckBox
+            android:id="@+id/cbAvailableOnly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:buttonTint="@color/lifelink_red"
+            android:checked="true"
+            android:text="Show available donors only"
+            android:textColor="@color/lifelink_text" />
+
+        <Button
+            android:id="@+id/btnSearchDonors"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:backgroundTint="@color/lifelink_red"
+            android:text="Search Donors"
+            android:textAllCaps="false"
+            android:textColor="@color/lifelink_white"
+            android:textSize="16sp" />
+
+        <ProgressBar
+            android:id="@+id/progressDonors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:indeterminateTint="@color/lifelink_red"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvSearchStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Select a blood group or search all donors."
+            android:textColor="@color/lifelink_secondary_text"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/layoutDonorResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+</ScrollView>
