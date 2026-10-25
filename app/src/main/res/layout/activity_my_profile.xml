@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lifelink_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="← Back to Dashboard"
+            android:textColor="@color/lifelink_red"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="My Profile"
+            android:textColor="@color/lifelink_red"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="20dp"
+            android:text="Manage your LifeLink account details."
+            android:textColor="@color/lifelink_secondary_text"
+            android:textSize="14sp" />
+
+        <ProgressBar
+            android:id="@+id/progressProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:indeterminateTint="@color/lifelink_red"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Full Name"
+            android:textColor="@color/lifelink_text"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etProfileName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="14dp"
+            android:background="@drawable/lifelink_input_background"
+            android:hint="Enter your full name"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="14dp"
+            android:textColor="@color/lifelink_text"
+            android:textColorHint="@color/lifelink_secondary_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email Address"
+            android:textColor="@color/lifelink_text"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etProfileEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="14dp"
+            android:background="@drawable/lifelink_input_background"
+            android:enabled="false"
+            android:hint="Email address"
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="14dp"
+            android:textColor="@color/lifelink_text"
+            android:textColorHint="@color/lifelink_secondary_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:textColor="@color/lifelink_text"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etProfilePhone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="14dp"
+            android:background="@drawable/lifelink_input_background"
+            android:hint="Enter phone number"
+            android:inputType="phone"
+            android:maxLength="15"
+            android:paddingHorizontal="14dp"
+            android:textColor="@color/lifelink_text"
+            android:textColorHint="@color/lifelink_secondary_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blood Group"
+            android:textColor="@color/lifelink_text"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinnerProfileBloodGroup"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="14dp"
+            android:background="@drawable/lifelink_input_background"
+            android:paddingHorizontal="10dp" />
+
+        <TextView
+            android:id="@+id/tvProfileDonorStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="20dp"
+            android:text="Donor status: Not registered"
+            android:textColor="@color/lifelink_secondary_text"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnSaveProfile"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/lifelink_red"
+            android:text="Save Changes"
+            android:textAllCaps="false"
+            android:textColor="@color/lifelink_white" />
+
+    </LinearLayout>
+</ScrollView>

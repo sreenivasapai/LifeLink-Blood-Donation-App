@@ -102,8 +102,13 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        btnProfile.setOnClickListener(v ->
-                showComingSoon("My Profile"));
+        btnProfile.setOnClickListener(v -> {
+            Intent intent = new Intent(
+                    HomeActivity.this,
+                    MyProfileActivity.class
+            );
+            startActivity(intent);
+        });
 
         btnLogout.setOnClickListener(v -> {
             mAuth.signOut();
